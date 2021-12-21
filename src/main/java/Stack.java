@@ -9,4 +9,26 @@ public class Stack {
         this.stack = new int[this.maxSize];
         this.top = -1;
     }
+
+    public boolean isEmpty(){
+        return (this.top == -1);
+    }
+
+    public boolean isFull(){
+        return (this.top == this.maxSize-1);
+    }
+
+    public void push(int i){
+        this.stack[++this.top] = i;
+    }
+
+    public int pop(){
+        return this.stack[this.top--];
+    }
+
+    public int peek() {
+        return this.stack[this.top];
+    }
+
+
 }
